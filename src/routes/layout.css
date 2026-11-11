@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+@import '../lib/theme.css';
+
+@layer base {
+	html {
+		background-color: var(--background);
+		/* smooth anchor scrolling, but only when the user has not asked for less motion */
+		scroll-behavior: smooth;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: var(--font-serif);
+	}
+
+	section[id] {
+		scroll-margin-top: 6rem;
+	}
+}
