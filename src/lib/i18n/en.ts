@@ -68,7 +68,7 @@ export const en = {
 			},
 			{
 				title: 'Affirmative',
-				body: 'I work from a non-pathologising stance. This includes a queer, LGBTQ+ and polyamory-affirming approach.'
+				body: 'I work from a non-pathologising stance.'
 			},
 			{
 				title: 'Collaborative',

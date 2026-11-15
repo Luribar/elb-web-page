@@ -70,7 +70,7 @@ export const es = {
 			},
 			{
 				title: 'Afirmativo',
-				body: 'Trabajo desde una postura no patologizante. Esto incluye un enfoque queer, LGBTQ+ y afirmativo de la poliamoria.'
+				body: 'Trabajo desde una postura no patologizante.'
 			},
 			{
 				title: 'Colaborativo',
