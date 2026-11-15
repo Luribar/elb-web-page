@@ -7,7 +7,6 @@ export interface SiteContent {
 			approach: string;
 			topics: string;
 			office: string;
-			projects: string;
 			contact: string;
 		};
 		langToggle: {
@@ -37,6 +36,11 @@ export interface SiteContent {
 		id: string;
 		title: string;
 		paragraphs: string[];
+		photo: {
+			src: string;
+			srcset: string;
+			alt: string;
+		};
 	};
 	approach: {
 		id: string;
@@ -55,32 +59,28 @@ export interface SiteContent {
 		id: string;
 		title: string;
 		items: string[];
-		weWorkWith: {
-			src: string;
-			alt: string;
-		};
 	};
 	office: {
 		id: string;
 		title: string;
-		paragraphs: string[];
+		intro: string;
 		photos: Array<{
 			src: string;
 			alt: string;
 		}>;
 		team: {
-			title: string;
-			body: string;
+			intro: string;
+			colleagues: Array<{
+				name: string;
+				url: string;
+			}>;
+			conjunction: string;
+			outro: string;
 			photo: {
 				src: string;
 				alt: string;
 			};
 		};
-	};
-	projects: {
-		id: string;
-		title: string;
-		items: string[];
 	};
 	contact: {
 		id: string;
@@ -88,25 +88,17 @@ export interface SiteContent {
 		intro: string;
 		email: string;
 		phone: string;
-		city: string;
-		availability: string;
-		formNote: string;
-		confidentiality: string;
 		labels: {
 			email: string;
 			phone: string;
-			city: string;
-			availability: string;
+			whatsapp: string;
 		};
 		map: {
 			alt: string;
-			linkLabel: string;
-			linkUrl: string;
 		};
 	};
 	footer: {
 		credential: string;
-		privacy: string;
 		copyright: string;
 	};
 	meta: {

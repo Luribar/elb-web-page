@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import type { SiteContent, Locale } from '$lib/i18n';
+	import Logo from '$lib/components/Logo.svelte';
 
 	let { content, locale }: { content: SiteContent; locale: Locale } = $props();
 
@@ -14,14 +15,7 @@
 		menuOpen = false;
 	}
 
-	const links = [
-		{ key: 'about' as const, id: 'about' },
-		{ key: 'approach' as const, id: 'approach' },
-		{ key: 'topics' as const, id: 'topics' },
-		{ key: 'office' as const, id: 'office' },
-		{ key: 'projects' as const, id: 'projects' },
-		{ key: 'contact' as const, id: 'contact' }
-	];
+	const links = ['about', 'topics', 'approach', 'office', 'contact'] as const;
 
 	const enHref = resolve('/');
 	const esHref = resolve('/es');
@@ -32,11 +26,8 @@
 		class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
 		aria-label="Main navigation"
 	>
-		<a
-			class="brand min-h-[44px] min-w-[44px] px-1 py-1 text-base font-medium text-foreground"
-			href="#{content.hero.id}"
-		>
-			{content.nav.brand}
+		<a class="brand min-h-[44px] min-w-[44px] px-1 py-1" href="#{content.hero.id}">
+			<Logo label={content.nav.brand} />
 		</a>
 
 		<button
@@ -50,10 +41,10 @@
 		</button>
 
 		<ul class="nav-links hidden items-center gap-4 md:flex">
-			{#each links as link (link.key)}
+			{#each links as link (link)}
 				<li>
-					<a class="nav-link inline-flex min-h-[44px] items-center" href="#{link.id}"
-						>{content.nav.links[link.key]}</a
+					<a class="nav-link inline-flex min-h-[44px] items-center" href="#{content[link].id}"
+						>{content.nav.links[link]}</a
 					>
 				</li>
 			{/each}
@@ -78,10 +69,12 @@
 	{#if menuOpen}
 		<div id="nav-menu" class="border-t border-border bg-background md:hidden">
 			<ul class="mx-auto flex max-w-5xl flex-col px-4 py-2 sm:px-6">
-				{#each links as link (link.key)}
+				{#each links as link (link)}
 					<li>
-						<a class="nav-link block min-h-[44px] py-2" href="#{link.id}" onclick={closeMenu}
-							>{content.nav.links[link.key]}</a
+						<a
+							class="nav-link block min-h-[44px] py-2"
+							href="#{content[link].id}"
+							onclick={closeMenu}>{content.nav.links[link]}</a
 						>
 					</li>
 				{/each}
@@ -140,20 +133,5 @@
 		text-decoration: underline;
 		text-decoration-color: var(--accent);
 		text-underline-offset: 4px;
-	}
-
-	.nav-link:focus-visible,
-	.lang-link:focus-visible,
-	.brand:focus-visible,
-	.menu-button:focus-visible {
-		outline: 2px solid var(--ring);
-		outline-offset: 2px;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		* {
-			transition: none !important;
-			animation: none !important;
-		}
 	}
 </style>

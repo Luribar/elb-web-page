@@ -9,7 +9,6 @@ export const en = {
 			approach: 'Approach',
 			topics: 'What I help with',
 			office: 'Where I work',
-			projects: 'Projects',
 			contact: 'Contact'
 		},
 		langToggle: {
@@ -23,27 +22,32 @@ export const en = {
 	hero: {
 		id: 'home',
 		name: 'Emilia Larraechea',
-		title: 'Psychologist · Clinical psychoanalysis',
+		title: 'Psychologist',
 		promise:
-			'My approach is to build, together with each person, a space of their own, free of judgment, where their singular suffering can be thought and worked through in company.',
+			'A space of your own, free of judgment, where what you are going through can be thought through in company.',
 		languages: 'I work in English and Spanish, online and in person in the Netherlands.',
 		ctas: {
 			book: 'Get in touch',
-			approach: 'How I work'
+			approach: 'What is my approach?'
 		},
 		portrait: {
 			src: '/images/portrait.jpg',
-			alt: 'Emilia Larraechea'
+			alt: 'Portrait of Emilia Larraechea in a red linen shirt, arms folded, looking at the camera with a slight smile against a pale blue-grey wall'
 		}
 	},
 	about: {
 		id: 'about',
 		title: 'About',
 		paragraphs: [
-			'I trained as a psychologist at the University of Chile, where I also completed a postgraduate degree in clinical psychoanalysis. I moved to the Netherlands three years ago, where I have been living and working in Utrecht while completing a Master’s in Literary Studies and Cultural Analysis at the University of Amsterdam.',
+			"I trained as a psychologist at the University of Chile, where I also completed a postgraduate degree in clinical psychoanalysis. I moved to the Netherlands three years ago, where I have been living and working in Utrecht while completing a Master's in Literary Studies and Cultural Analysis at the University of Amsterdam.",
 			'Throughout my professional experience I have specialized in supporting people who are processing traumatic experiences, migration-related grief, gender-based violence, and a sense of lacking direction or motivation. I approach these experiences in their complexity: not only as an individual struggle, but as something shaped by social and cultural contexts, and by what exceeds our awareness.',
 			'I am interested in the links between psychotherapy, literature, gender studies and the cultural field. My approach is to build, together with each person, a space of their own, free of judgment, where their singular suffering can be thought and worked through in company.'
-		]
+		],
+		photo: {
+			src: '/images/about-me-800.jpg',
+			srcset: '/images/about-me-480.jpg 480w, /images/about-me-800.jpg 800w',
+			alt: 'Emilia Larraechea standing in a beech forest in autumn, among tall trees with yellow and orange leaves and a carpet of fallen leaves'
+		}
 	},
 	approach: {
 		id: 'approach',
@@ -60,7 +64,7 @@ export const en = {
 			},
 			{
 				title: 'Contextualised',
-				body: 'The culture and context in which you were raised shape what matters to you and what can help you. That is why I don’t believe in universal, fixed interventions: the work is built case by case.'
+				body: "The culture and context in which you were raised shape what matters to you and what can help you. That is why I don't believe in universal, fixed interventions: the work is built case by case."
 			},
 			{
 				title: 'Affirmative',
@@ -78,89 +82,65 @@ export const en = {
 	},
 	topics: {
 		id: 'topics',
-		title: 'I can help you with',
+		title: 'I can help you with:',
 		items: [
 			'Trauma and its effects',
 			'Migration, culture shock and adjusting to a new country',
 			'Grief and loss',
 			'Loneliness and isolation',
 			'Gender-based violence, including sexual violence',
-			'Questions of Identity and sexuality',
-			'Re thinking love, friendship and relationships',
+			'Questions of identity and sexuality',
+			'Rethinking love, friendship and relationships',
 			'Persistent, intrusive thoughts',
 			'Feeling lost or without direction'
-		],
-		weWorkWith: {
-			src: '/images/we-work-with.png',
-			alt: 'We work with: ADHD, anxiety and panic attacks, depression, obsessive thoughts (OCD), burnout and work stress, trauma and PTSD, grief and loss, culture shock and migration stress, low self-esteem, relationship difficulties, loneliness and isolation, identity and sexuality. Beyond the diagnosis.'
-		}
+		]
 	},
 	office: {
 		id: 'office',
 		title: 'Office',
-		paragraphs: [
-			'Here is where I work: it is steps away from the train station of Lunetten.',
-			'I share it with my two colleagues: Clem (Psymobil) and Rodrigo (Plexus Psyche). We offer both individual therapy and we work together facilitating workshops in Universities and Community places.'
-		],
+		intro: 'Here is where I work. It is steps away from the train station of Lunetten.',
 		photos: [
 			{
 				src: '/images/office-room.jpg',
-				alt: 'The consulting room, with two armchairs and a view onto the street'
+				alt: 'Office interior with an orange wall, a blue velvet sofa, a rust-red corduroy armchair, an olive armchair, a tall bookshelf and potted plants'
 			},
 			{
 				src: '/images/office-lounge.jpg',
-				alt: 'The shared practice space, with sofas and a coffee table'
+				alt: 'Bright white room with large windows, a wooden table with four chairs, an olive armchair, a small round table and a rust-red sofa with a mustard cushion'
 			}
 		],
 		team: {
-			title: 'The team',
-			body: 'Clem, Rodrigo and I share these rooms.',
+			intro: 'I share it with my two colleagues: ',
+			colleagues: [
+				{ name: 'Clem (Psymobil)', url: 'https://www.psymobil.com/me' },
+				{ name: 'Rodrigo (Plexus Psyche)', url: 'https://www.plexuspsyche.com/en/rodrigo' }
+			],
+			conjunction: ' and ',
+			outro:
+				'. We offer both individual therapy and we work together facilitating workshops in Universities and Community places.',
 			photo: {
 				src: '/images/colleagues.jpg',
-				alt: 'Emilia with her two colleagues, Clem and Rodrigo'
+				alt: 'Three people sitting close together on a blue sofa in front of an orange wall, smiling at the camera'
 			}
 		}
-	},
-	projects: {
-		id: 'projects',
-		title: 'Projects',
-		items: [
-			'Collage workshop DVK',
-			'Migration workshop Well Being Week UU',
-			'Burn Out workshop Humanities Lab UvA',
-			'Holding stories together DVK',
-			'Gender Bias workshop D&I week Delft University',
-			'Gent Conference: About the poem and its interruption of knowledge',
-			'UU Class: Why psychoanalysis in an international context'
-		]
 	},
 	contact: {
 		id: 'contact',
 		title: 'Contact',
 		intro: 'You are welcome to write to me.',
-		email: '[email@example.com]',
-		phone: '[+31 0 000 000 00]',
-		city: 'Utrecht, Netherlands',
-		availability: '[Availability placeholder — days/times or general note.]',
-		formNote:
-			'The contact form is not wired up yet. Please write directly by email or phone/WhatsApp.',
-		confidentiality:
-			'Confidentiality note: all communications are treated with care in line with applicable confidentiality and GDPR obligations.',
+		email: 'Emilia.larraechea@gmail.com',
+		phone: '+31 61 6666 202',
 		labels: {
 			email: 'Email',
-			phone: 'Phone / WhatsApp',
-			city: 'City',
-			availability: 'Availability'
+			phone: 'Phone',
+			whatsapp: 'WhatsApp'
 		},
 		map: {
-			alt: 'Map showing the area around Lunetten station in Utrecht',
-			linkLabel: 'Open in OpenStreetMap',
-			linkUrl: 'https://www.openstreetmap.org/?mlat=52.06641&mlon=5.14326#map=15/52.06641/5.14326'
+			alt: 'Google map centred on Utrecht Lunetten station'
 		}
 	},
 	footer: {
-		credential: 'Emilia Larraechea · Psychologist, University of Chile · Clinical psychoanalysis',
-		privacy: 'Privacy (placeholder)',
+		credential: 'Emilia Larraechea · Psychologist in Utrecht',
 		copyright: '©'
 	},
 	meta: {

@@ -1,18 +1,25 @@
 :root {
-	/* Palette sampled from the floral graphics in the brief. */
-	--background: #f7f3ec;
-	--surface: #fffdf8;
-	--muted: #efe9dd;
-	--border: #ddd4c4;
-	--foreground: #2e2530;
-	--muted-foreground: #6b6470;
-	--primary: #48304b;
-	--primary-foreground: #f7f3ec;
-	--accent: #8d6da0;
-	--ring: #8d6da0;
-	--sage: #8a9070;
-	--sky: #92b3c2;
-	--ochre: #be7a33;
+	/* Palette sampled from the "We Work With" graphic and the floral art. */
+	--teal-deep: #446770;
+	--teal: #4f8383;
+	--cream: #e4e0d4;
+	--plum: #834f4f;
+	--rose: #ae716c;
+	--rose-deep: #995853;
+	--sky: #6aa9b0;
+	--lavender: #aeaece;
+	--sand: #cec3ae;
+
+	--background: #f3efe4;
+	--surface: #faf8f2;
+	--muted: var(--cream);
+	--border: var(--sand);
+	--foreground: #1f3338;
+	--muted-foreground: #37555d;
+	--primary: var(--teal-deep);
+	--primary-foreground: #f8f5ec;
+	--accent: var(--plum);
+	--ring: var(--plum);
 }
 
 @theme inline {
@@ -26,9 +33,6 @@
 	--color-primary-foreground: var(--primary-foreground);
 	--color-accent: var(--accent);
 	--color-ring: var(--ring);
-	--color-sage: var(--sage);
-	--color-sky: var(--sky);
-	--color-ochre: var(--ochre);
 	--font-sans:
 		'Inter Variable', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',

@@ -6,7 +6,6 @@
 	import Topics from '$lib/sections/Topics.svelte';
 	import Approach from '$lib/sections/Approach.svelte';
 	import Office from '$lib/sections/Office.svelte';
-	import Projects from '$lib/sections/Projects.svelte';
 	import Contact from '$lib/sections/Contact.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
 
@@ -16,6 +15,11 @@
 
 	const enHref = resolve('/');
 	const esHref = resolve('/es');
+
+	// Client-side navigation between / and /es does not re-render app.html.
+	$effect(() => {
+		document.documentElement.lang = locale;
+	});
 </script>
 
 <svelte:head>
@@ -38,7 +42,6 @@
 	<Topics {content} />
 	<Approach {content} />
 	<Office {content} />
-	<Projects {content} />
 	<Contact {content} />
 </main>
 <Footer {content} />
